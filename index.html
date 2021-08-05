@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pricing Cards</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1>Pricing Plans</h1>
+                <p>Choose your best plan by switching between the different prices</p>
+            </div>
+            
+            <div id="app-cover">
+                <div class="row toggle-btn">
+                      <div class="button b2" id="button-10">
+                        <input type="checkbox" class="checkbox" id="checkbox" onclick="check()">
+                        <div class="knobs">
+                          <span style="font-size: 15px;">Month</span>
+                        </div>
+                        <div class="layer"></div>
+                      </div>
+                    </div>
+                  </div>
+                        
+                    </div>
+                  </div>
+                </div>
+            <div class="package-container">
+                <div class="packages">
+                    <div id="pack1">
+                    <div class="pic">
+                        <img src="picture1.png" alt="">
+                    </div>
+                    <h3 class="text0">BASIC</h3>
+                    <hr class="line1">
+                    <h2 class="text1" id="basic1">$ 14</h2>
+                    <h2 class="text2" >$ 20</h2>
+                    <div class="month">
+                        <p class="month1">/month</p>
+                    </div>
+                    <ul class="list">
+                        <li><span class="fa fa-check"></span> 5 Projects</li>
+                    </ul>
+                    </div>
+                    <div class="png">
+                        <button class="butto" onclick="readmore()">Choose <span>></span></button>
+                    </div>
+                </div>
+                <div class="packages">
+                    <div id="pack2">
+                        <div class="pic">
+                            <img src="picture2.png" alt="">
+                        </div>
+                    <h3 class="text0">PLUS</h3>
+                    <hr class="line1">
+                    <h2 class="text1">$ 74</h2>
+                    <h2 class="text2">$ 99</h2>
+                    <div class="month">
+                        <p class="month1">/month</p>
+                    </div>
+                    <ul class="list">
+                        <li><span class="fa fa-check"></span> 10 Projects</li>
+                        <li><span class="fa fa-check"></span> Get 10 Getty pics</li>
+                    </ul>
+                    </div>
+                    <div class="png">
+                        <button class="butto" onclick="readmore()">Choose <span>></span></button>
+                    </div>
+                </div>
+                <div class="packages">
+                    <div id="pack3">
+                        <div class="pic">
+                            <img src="picture3.png" alt="">
+                        </div>
+                    <h3 class="text0">PRO</h3>
+                    <hr class="line1">
+                    <h2 class="text1">$ 140</h2>
+                    <h2 class="text2">$ 195</h2>
+                    <div class="month">
+                        <p class="month1">/month</p>
+                    </div>
+                    <ul class="list">
+                        <li><span class="fa fa-check"></span> 30 Projects</li>
+                        <li><span class="fa fa-check"></span> Get 20 Getty pics</li>
+                    </ul>
+                    </div>
+                    <div id="read" class="read">
+                        <span class="close">&times;</span>
+                        <ul>
+                            <li><span class="fa fa-check"></span><span>30 Projects</span></li>
+                            <li><span class="fa fa-check"></span> <span>Get 20 Getty pics</span></li>
+                            <li><span class="fa fa-check"></span> <span>Have you works strored in a database</span></li>
+                            <li><span class="fa fa-check"></span> <span>Be searched by Industry Professionals</span></li>
+                            <li><span class="fa fa-check"></span><span> Monitor who you share it with</span></li>
+                            <li><span class="fa fa-check"></span> <span>promote and share your book</span></li>
+                        </ul>
+                    </div>
+                    <div class="seemore close1"><button class="button12" id="see" onclick="myFunction()">+ See more</button></div>
+                    <div class="png" id="png">
+                        <button class="butto" onclick="readmore()">Choose <span>></span></button>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        
+            
+        
+       
+        <script>
+            function check(){
+                var checkBox= document.getElementById("checkbox")
+                var text1= document.getElementsByClassName("text1")
+                var text2= document.getElementsByClassName("text2")
+                
+                for(var i=0; i<text1.length;i++){
+                    if(checkBox.checked!=true){
+                        text1[i].style.display = "block";
+                        text2[i].style.display="none"
+                    }
+                    else {
+                        text1[i].style.display = "none";
+                        text2[i].style.display = "block";
+
+                    }
+                }
+            }
+            check();
+            
+        </script>
+        
+        <script>
+            function myFunction() {
+                document.getElementById("pack3").style.display = "none";
+                document.getElementById("read").style.display="inline";
+                document.getElementById("png").style.marginTop="0px";
+                document.getElementById("see").style.display="none"
+
+            }
+        </script>
+<script>
+    var closebtns = document.getElementsByClassName("close");
+    var i;
+    
+    for (i = 0; i < closebtns.length; i++) {
+      closebtns[i].addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+        document.getElementById("pack3").style.display = "block";
+        document.getElementById("see").style.display="block"
+      });
+      
+    }
+    
+    </script>
+    </body>
+</html>
